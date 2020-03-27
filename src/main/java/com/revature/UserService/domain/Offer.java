@@ -1,4 +1,4 @@
-package com.revature.domain;
+package com.revature.UserService.domain;
 
 public class Offer {
 

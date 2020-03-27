@@ -1,6 +1,6 @@
-package com.revature.service;
+package com.revature.UserService.service;
 
-import com.revature.domain.User;
+import com.revature.UserService.domain.User;
 
 public interface UserService {
 	public boolean createUser(User user);

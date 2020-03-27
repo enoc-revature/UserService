@@ -1,4 +1,4 @@
-package com.revature.controller;
+package com.revature.UserService.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.revature.domain.User;
-import com.revature.service.UserService;
+import com.revature.UserService.domain.User;
+import com.revature.UserService.service.UserService;
 
 @RestController
 public class UserController {

@@ -1,4 +1,4 @@
-package com.revature.domain;
+package com.revature.UserService.domain;
 
 import java.util.List;
 
@@ -6,9 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import javax.persistence.Transient;
 
 //@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "username")
 //@Table(name = "usr")
@@ -23,6 +21,7 @@ public class User {
 	@Column(name = "password")
 	private String password;
 
+	@Transient
 	private List<Car> carList;
 
 	public String getUsername() {

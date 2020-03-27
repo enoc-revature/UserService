@@ -1,12 +1,12 @@
-package com.revature.service;
+package com.revature.UserService.service;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.revature.domain.User;
-import com.revature.repository.UserRepository;
+import com.revature.UserService.domain.User;
+import com.revature.UserService.repository.UserRepository;
 
 @Service
 public class UserServiceImpl implements UserService {

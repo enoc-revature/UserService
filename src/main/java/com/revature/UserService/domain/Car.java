@@ -1,4 +1,4 @@
-package com.revature.domain;
+package com.revature.UserService.domain;
 
 import javax.persistence.Transient;
 import java.util.List;
