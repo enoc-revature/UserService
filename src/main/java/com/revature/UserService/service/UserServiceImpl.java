@@ -11,10 +11,17 @@ import com.revature.UserService.repository.UserRepository;
 @Service
 public class UserServiceImpl implements UserService {
 	private UserRepository userRepo;
+	
+	private CarService carService;
 
 	@Autowired
 	public void setUserRepository(UserRepository userRepo) {
 		this.userRepo = userRepo;
+	}
+	
+	@Autowired
+	public void setCarService(CarService carService) {
+		this.carService = carService;
 	}
 
 	@Override
@@ -34,7 +41,9 @@ public class UserServiceImpl implements UserService {
 	public User getUserById(String username) {
 		Optional<User> existUser = userRepo.findById(username);
 		if(existUser.isPresent()) {
-			return existUser.get();
+			User user = existUser.get();
+			user.setCarList(carService.getCarsByOwner(user.getUsername()));
+			return user;
 		} else {
 			return null;
 		}
