@@ -25,10 +25,17 @@ public class UserController {
 		return userService.getUserById(username);
 	}
 	
-	@PostMapping("/user")
+	@PostMapping("/user/auth")
 	public User authUser(@RequestBody User user) {
-		return userService.authUser(user);
+		User authUser = userService.authUser(user);
+		return authUser;
 	}
+
+	@PostMapping("/user")
+	public boolean createUser(@RequestBody User user) {
+		return userService.createUser(user);
+	}
+	
 	
 	@PutMapping("/user")
 	public void updateUser(@RequestBody User user) {
