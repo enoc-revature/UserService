@@ -16,7 +16,7 @@ public class UserController {
 	private UserService userService;
 
 	@Autowired
-	public void setUserService() {
+	public void setUserService(UserService userService) {
 		this.userService = userService;
 	}
 	
@@ -33,6 +33,7 @@ public class UserController {
 
 	@PostMapping("/user")
 	public boolean createUser(@RequestBody User user) {
+		System.out.println("createUser Method.");
 		return userService.createUser(user);
 	}
 	
